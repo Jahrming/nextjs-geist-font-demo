@@ -56,3 +56,22 @@ Object.defineProperty(global, 'IntersectionObserver', {
     disconnect() {}
   },
 });
+
+// Mock ResizeObserver
+Object.defineProperty(window, 'ResizeObserver', {
+  writable: true,
+  value: class {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  },
+});
+
+Object.defineProperty(global, 'ResizeObserver', {
+  writable: true,
+  value: class {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  },
+});
